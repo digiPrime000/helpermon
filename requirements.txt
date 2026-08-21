@@ -1,0 +1,12 @@
+# Upper bounds rather than exact pins. An exact pin is the reproducible
+# answer for a machine we control, but this list is installed on strangers'
+# machines against whatever Python they already have, and an exact version
+# with no ready-built package for their interpreter fails hard. The bound at
+# the next major keeps a breaking release out without demanding one exact
+# build. Last verified against opencv 5.0.0, numpy 2.4.2, mss 10.2.0.
+opencv-python>=4.8,<6
+numpy>=1.24,<3
+mss>=9.0,<11
+pygetwindow>=0.0.9,<1
+pydirectinput>=1.0.4,<2
+keyboard>=0.13.5,<1

@@ -1,0 +1,99 @@
+name: Something does not work
+description: A bot clicks the wrong thing, stops, or does nothing at all
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time. Two things make a report easy to act on:
+        **which bot**, and **a dry-run log**. A dry run plans everything and
+        clicks nothing, so it is safe to produce at any time and it shows what
+        the bot believed it was looking at.
+
+  - type: dropdown
+    id: bot
+    attributes:
+      label: Which part of Helpermon?
+      options:
+        - Dungeons
+        - Digital World Search
+        - Night Market
+        - The launcher window itself
+        - Setup / the wizard
+        - install.bat or remove.bat
+    validations:
+      required: true
+
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what you got instead.
+      placeholder: |
+        I pressed Start on the Dungeons page. The log said it found the list,
+        then it stopped after the first dungeon and did nothing more.
+    validations:
+      required: true
+
+  - type: textarea
+    id: log
+    attributes:
+      label: The log
+      description: >
+        Paste the log from the bot's page. A **dry run** is the most useful
+        kind. It is pasted as text, so it stays searchable — no screenshot
+        needed for this part.
+      render: text
+    validations:
+      required: true
+
+  - type: dropdown
+    id: input
+    attributes:
+      label: How does Helpermon reach the emulator?
+      description: The choice from the first dialog, and it changes almost everything.
+      options:
+        - adb
+        - mouse and keyboard
+        - not sure
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Helpermon version
+      description: The release you downloaded, for example 1.0. It is also shown on the About page.
+      placeholder: "1.0"
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Windows and LDPlayer
+      description: Windows version, LDPlayer version, and the game's language.
+      placeholder: "Windows 11, LDPlayer 9.1.20, game in English"
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: >
+        Optional, but a picture of the screen the bot was looking at often
+        settles it in one go. Drag the file into this box. Screenshots
+        attached to an issue are fine — the rule about game images applies to
+        the repository, not to bug reports.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you send it
+      options:
+        - label: I looked at the symptom table in QUICKSTART.md
+          required: false
+        - label: LDPlayer is **not** running as administrator, or Helpermon is running elevated too
+          required: false

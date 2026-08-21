@@ -1,0 +1,53 @@
+name: An idea for Helpermon
+description: Something it should do, or should do differently
+title: "[Idea] "
+labels: ["idea"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ideas are welcome. The useful shape is **what you were trying to get
+        done**, rather than which button should be added — the second one is
+        easier to write and the first one is what makes a good answer
+        possible.
+
+        Not sure yet, or want to talk it over first? Open a **Discussion**
+        instead. Nothing is lost either way; a discussion that turns into a
+        plan becomes an issue later.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part does it concern?
+      options:
+        - Dungeons
+        - Digital World Search
+        - Night Market
+        - The launcher window
+        - Setup / the wizard
+        - Installation
+        - A part of the game Helpermon does not play yet
+    validations:
+      required: true
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: What should it do?
+      placeholder: |
+        Let the dungeon bot run through the day's dungeons on its own and
+        stop when there are no attempts left, so I do not have to come back
+        to it every hour.
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: What are you doing by hand today?
+      description: >
+        The part that helps most. Knowing what the manual routine looks like
+        usually shows whether the idea as written is really the shortest way
+        there.
+    validations:
+      required: false

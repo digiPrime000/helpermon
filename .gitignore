@@ -1,0 +1,35 @@
+# The virtual environment install.bat builds. Machine-local by nature:
+# a venv hardcodes the absolute path it was created at.
+.venv/
+
+# Learned data and local state
+userdata/
+calib.json
+"Start Helpermon.bat"
+"Start bot.bat"
+"Bot starten.bat"
+
+# Image material from the game does not belong in the repository
+templates/*.png
+digits/**/*.png
+
+# Debug output
+debug/
+debug_bot/
+debug_live/
+debug_probe/
+debug_counters/
+debug_dungeon/
+debug_skewer/
+*.log
+
+__pycache__/
+*.pyc
+
+# Internal working documents. They stay on this machine: CLAUDE.md is the
+# rulebook for working on the code, RELEASE_PLAN.md the running plan, and
+# neither belongs in a published copy. release.py already holds both back
+# from a build; this keeps them out of the repository as well.
+CLAUDE.md
+RELEASE_PLAN.md
+GITHUB_ROLLOUT.md
