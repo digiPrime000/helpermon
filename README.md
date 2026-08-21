@@ -15,6 +15,7 @@ and a setup wizard.
 2. UNZIP AND RUN "install.bat"
 3. START with "Start Helpermon.bat" or using the desktop shortcut
 4. Have fun farming
+5. Emerald fund: https://ko-fi.com/digiprime000 <3
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
